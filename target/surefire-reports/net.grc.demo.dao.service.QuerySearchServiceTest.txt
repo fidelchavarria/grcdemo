@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: net.grc.demo.dao.service.QuerySearchServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.065 sec - in net.grc.demo.dao.service.QuerySearchServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.035 sec - in net.grc.demo.dao.service.QuerySearchServiceTest
