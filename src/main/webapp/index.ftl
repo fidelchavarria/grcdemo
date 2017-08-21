@@ -98,8 +98,29 @@
 
 <script>
 	$(document).ready(function() {
-		$('#example').DataTable();
+		
+		 $(this).closest('form').find("input[type=text], textarea").val("");
+		 
+		$('#example').DataTable( {
+	        "order": [[ 0, "desc" ]]
+	    } );
+		
 	});
+	
+	function deletes(value){
+		console.log('deletes: [' + value + ']');
+		 $('#delete').val(value);
+		 $('#frm').attr('action', "/").attr('method','post').submit();
+		 return false;
+	}
+	
+	function reload(value){
+		console.log('query: [' + value + ']');
+		 $('#query').val(value);
+		 $('#frm').submit();
+		 return false;
+	}
+	
 </script>
 </head>
 
@@ -124,7 +145,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
-			-->
+		
 		</div>
 	</nav>
 
@@ -153,8 +174,9 @@
 						<!-- <h2>Custom search field</h2> -->
 						<div id="custom-search-input">
 							<div class="input-group col-md-12">
-								<input type="text" name="query" class="form-control input-lg"
-									placeholder="Buscar" /> <span class="input-group-btn">
+								<input type="text" id="query" name="query" class="form-control input-lg" placeholder="Buscar" /> 
+								<input type="hidden" id="delete" name="delete"/>
+									<span class="input-group-btn">
 									<button class="btn btn-info btn-lg" type="button">
 										<i class="glyphicon glyphicon-search"></i>
 									</button>
@@ -193,8 +215,8 @@
 						<td>
 							<table>
 								<tr>
-									<td><a href="#">ejecutar</a>|</td>
-									<td><a href="#">eliminar</a></td>
+									<td><a id="reload" href="javascript:reload('${s.query}');" >ejecutar</a>|</td>
+									<td><a id="delete"  href="javascript:deletes('${s.id}');"  >eliminar</a></td>
 								</tr>
 							</table>
 						</td>
@@ -218,5 +240,6 @@
 	<script src="dist/js/bootstrap.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+	
 </body>
 </html>

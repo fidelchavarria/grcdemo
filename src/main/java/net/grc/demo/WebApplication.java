@@ -1,4 +1,4 @@
-package net.grc.demo.app;
+package net.grc.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-        "net.grc.demo.controller",
         "net.grc.demo.view.controller",
+        "net.grc.demo.dao",
+        "net.grc.demo.dao.service",
+        "net.grc.demo.service.controller",
         "net.grc.demo.service.client" })
 public class WebApplication extends SpringBootServletInitializer {
 	

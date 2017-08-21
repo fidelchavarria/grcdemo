@@ -1,10 +1,7 @@
 package net.grc.demo.service.client;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.TreeMap;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
@@ -12,41 +9,37 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import net.grc.demo.model.Post;
-import net.grc.demo.model.QuerySearch;
 import net.grc.demo.model.User;
 
 @Service
 public class RemoteApiServiceClient {
 
-	private TreeMap<Date, QuerySearch> sorter = new TreeMap<Date, QuerySearch>();
-	private final AtomicLong counter = new AtomicLong();
+	public List<Post> findPostContainingString(String[] query) {
 
-	public List<QuerySearch> findPostContainingString(String[] query) {
-
+		List<Post> retlist = new LinkedList<Post>();
+		
 		ResponseEntity<Post[]> postEntities = restTemplate().getForEntity("https://jsonplaceholder.typicode.com/posts",
 				Post[].class);
 		Post[] post = postEntities.getBody();
 
 		for (Post p : post) {
 			for (String q :query) {
-				
-				if (p.getTitle().contains(q)) {
-					p.setUser(findUserById(p.getUserId()));
-					Date now = new Date();
-					sorter.put(now, new QuerySearch(counter.incrementAndGet(), q, p));
-				}
+				if (p.getTitle().contains(q)) 
+					retlist.add(p);
 			}
-			
 		}
 
-		// TODO save to DB and retorn list From DataBase
-
-		sorter.lastEntry();
-		return new LinkedList<QuerySearch>(sorter.values());
+		return retlist;
 
 	}
 
-
+	
+	public Post findPostById(int postId) {
+		Post post = restTemplate().getForObject("https://jsonplaceholder.typicode.com/posts/" + postId, Post.class);
+		post.setUser(findUserById(post.getUserId()));
+		return post;
+	}
+	
 	public User findUserById(int id) {
 		return restTemplate().getForObject("https://jsonplaceholder.typicode.com/users/" + id, User.class);
 	}
@@ -55,4 +48,7 @@ public class RemoteApiServiceClient {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
+
+
+	
 }
