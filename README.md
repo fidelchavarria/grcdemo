@@ -17,10 +17,10 @@ Aplicación creada para prueba técnica de GRCSolutions Panamá
 
 ```bash
 
-# Clonar este repositorio [ git clone https://fidelchavarria@bitbucket.org/fidelchavarria/grcdemo.git ]
+# Clonar este repositorio [ git clone https://github.com/fidelchavarria/grcdemo.git ]
 
 
-Fidels-Air:~ Fidel$  git clone https://fidelchavarria@bitbucket.org/fidelchavarria/grcdemo.git
+Fidels-Air:~ Fidel$  git clone https://github.com/fidelchavarria/grcdemo.git
 Cloning into 'grcdemo'...
 remote: Counting objects: 969, done.
 remote: Compressing objects: 100% (490/490), done.
@@ -138,4 +138,4 @@ Fidels-Air:grcdemo Fidel$ **java -jar target/grcdemo-1.1.0-SNAPSHOT.jar**
 
 ### Contacto ###
   
-* enmail: fidelchavarria@gmail.com
+* email: fidelchavarria@gmail.com
