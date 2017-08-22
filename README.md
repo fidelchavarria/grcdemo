@@ -4,11 +4,13 @@ Aplicación creada para prueba técnica de GRCSolutions Panamá
   
 ### Prerequesitos de Instalación ###
 
-* Java JDK 1.8.0_91 ó mayor
+* Git  (https://git-scm.com/)
+
+* Java JDK 1.8.0_91 ó mayor (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 * Servicios API públicos de [ https://jsonplaceholder.typicode.com ] deben estar retornando datos:
-   https://jsonplaceholder.typicode.com/posts
-   https://jsonplaceholder.typicode.com/users
+     https://jsonplaceholder.typicode.com/posts
+     https://jsonplaceholder.typicode.com/users
 
 ### Prerequesitos de Ejecución ###
 
@@ -16,7 +18,9 @@ Aplicación creada para prueba técnica de GRCSolutions Panamá
 ```bash
 
 # Clonar este repositorio
-Fidels-Air:~ Fidel$ git clone https://fidelchavarria@bitbucket.org/fidelchavarria/grcdemo.git
+
+
+Fidels-Air:~ Fidel$  **git clone https://fidelchavarria@bitbucket.org/fidelchavarria/grcdemo.git**
 Cloning into 'grcdemo'...
 remote: Counting objects: 969, done.
 remote: Compressing objects: 100% (490/490), done.
@@ -24,11 +28,15 @@ remote: Total 969 (delta 477), reused 824 (delta 443)
 Receiving objects: 100% (969/969), 29.66 MiB | 3.56 MiB/s, done.
 Resolving deltas: 100% (477/477), done.
 
+
+
 # Entrar a la carpeta
-Fidels-Air:~ Fidel$ cd grcdemo/
+Fidels-Air:~ Fidel$ **cd grcdemo/**
+
+
 
 # Ejecutar
-Fidels-Air:grcdemo Fidel$ java -jar target/grcdemo-1.1.0-SNAPSHOT.jar
+Fidels-Air:grcdemo Fidel$ **java -jar target/grcdemo-1.1.0-SNAPSHOT.jar**
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
