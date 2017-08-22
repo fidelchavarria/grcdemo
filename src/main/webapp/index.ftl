@@ -158,9 +158,9 @@
 			</h1>
 			<p class="lead">
 				Use este buscador para encontrar cadenas en todos los posibles
-				comentarios en la api <a
+				títulos en la api <a
 					href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a>
-				<br> Junto con el Usuario que lo realizó en <a
+				<br> junto con el usuario que lo realizó en <a
 					href="https://jsonplaceholder.typicode.com/users" target="_blank">https://jsonplaceholder.typicode.com/users</a>
 				<br>
 			</p>
