@@ -1,0 +1,12 @@
+net/grc/demo/service/client/LocalApiServiceClient.class
+net/grc/demo/service/controller/HistoricQuerySearchController.class
+net/grc/demo/service/client/RemoteApiServiceClient.class
+net/grc/demo/model/Company.class
+net/grc/demo/model/Post.class
+net/grc/demo/WebApplication.class
+net/grc/demo/model/QuerySearch.class
+net/grc/demo/model/Address.class
+net/grc/demo/dao/service/QuerySearchService.class
+net/grc/demo/dao/QuerySearchRepository.class
+net/grc/demo/model/User.class
+net/grc/demo/view/controller/MainPageController.class
